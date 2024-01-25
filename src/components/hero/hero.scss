@@ -8,20 +8,17 @@
         max-width: 1366px;
         margin: auto;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
         
         .textContainer{
-            height: 100%;
+            
             display: flex;
             flex-direction: column;
-            justify-content: center;
             gap: 40px;
             
-            h2{
-                font-size: 30px;
-                color: rebeccapurple;
-                letter-spacing: 10px;
-            }
-
             h1{
                 font-size: 88px;
             }
@@ -39,6 +36,33 @@
                 }
             }
         }
+        .nameTextContainer{
+            width:fit-content;
+            position: relative;
+            left: 5px;
+            .myName{
+                font-size: 30px;
+                color: rebeccapurple;
+                letter-spacing: 10px;
+                width: 100%;
+                border-right: 5px solid;
+                white-space:nowrap;
+                overflow: hidden;
+                animation: 
+                    typing 2s steps(16), 
+                    cursor .4s step-end infinite alternate;
+            }
+    
+            @keyframes cursor {
+                50% { border-color: transparent}
+            }
+    
+            @keyframes typing {
+                from { width: 0}
+            }
+    
+        }
+        
     }
 
     .slidingTextContainer{
