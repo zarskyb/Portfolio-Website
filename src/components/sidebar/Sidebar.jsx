@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Links from "./links/Links"
 import "./sidebar.scss"
 import ToggleButton from "./toggleButton/ToggleButton"
@@ -7,6 +7,19 @@ import {motion} from "framer-motion"
 const Sidebar = () => {
     
     const [open,setOpen] = useState(false);
+    const btnRef = useRef();
+
+    useEffect(() => {
+        const closeDropdown = (e) => {
+            if(e.target !== btnRef.current) {
+                setOpen(false);
+            }
+        }
+
+        document.body.addEventListener('click', closeDropdown);
+
+        return () => document.body.removeEventListener('click', closeDropdown);
+    }, []);
 
     const variants = {
         initial: {
@@ -22,7 +35,7 @@ const Sidebar = () => {
         },
         closed: {
             opacity:1,
-            clipPath: "circle(30px at 50px 50px)",
+            clipPath: "circle(35px at 50px 50px)",
             tranistion:{
                 delay: 0.5,
                 type: "spring",
@@ -36,7 +49,7 @@ const Sidebar = () => {
             <motion.div className="bg" variants={variants}>
                 <Links/>
             </motion.div>
-            <ToggleButton setOpen={setOpen}/>
+            <ToggleButton setOpen={setOpen} btnRef={btnRef}/>
         </motion.div>
     )
 }

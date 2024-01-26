@@ -1,9 +1,10 @@
 import {motion} from "framer-motion"
 
-const ToggleButton = ({setOpen}) => {
+const ToggleButton = ({setOpen, btnRef}) => {
+    
     return (
-        <button onClick={()=>setOpen((prev) => !prev)}>
-            <svg width="23" height ="23" viewBox="0 0 23 23">
+        <button ref={btnRef} onClick={()=>setOpen((prev) => !prev)}>
+            <svg className="menuIcon" width="23" height ="23" viewBox="0 0 23 23">
                 <motion.path 
                     strokeWidth="3" 
                     stroke="black" 

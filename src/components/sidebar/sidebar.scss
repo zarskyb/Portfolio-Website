@@ -41,4 +41,8 @@
         border: none;
         cursor: pointer;
     }
+
+    svg{
+        pointer-events: none;
+    }
 }
