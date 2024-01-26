@@ -2,8 +2,7 @@
     height: calc(100vh - 100px);
     overflow: hidden;
     background: linear-gradient(180deg, #0c0c1d, #111132);
-    position: relative;
-
+    
     .wrapper{
         max-width: 1366px;
         margin: auto;
@@ -73,7 +72,7 @@
                 border-color: transparent
             }
             50% {
-                border-color: #00aeff
+                border-color: rebeccapurple
             }
         }
 

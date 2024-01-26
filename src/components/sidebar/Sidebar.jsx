@@ -9,7 +9,11 @@ const Sidebar = () => {
     const [open,setOpen] = useState(false);
 
     const variants = {
+        initial: {
+            opacity:0
+        },
         open: {
+            opacity:1,
             clipPath: "circle(1200px at 50px 50px)",
             transition: {
                 type: "spring",
@@ -17,6 +21,7 @@ const Sidebar = () => {
             }
         },
         closed: {
+            opacity:1,
             clipPath: "circle(30px at 50px 50px)",
             tranistion:{
                 delay: 0.5,
@@ -27,7 +32,7 @@ const Sidebar = () => {
         },
     }
     return (
-        <motion.div className="sidebar" animate={open ? "open" : "closed"}>
+        <motion.div className="sidebar" animate={open ? "open" : "closed"} initial="initial">
             <motion.div className="bg" variants={variants}>
                 <Links/>
             </motion.div>
