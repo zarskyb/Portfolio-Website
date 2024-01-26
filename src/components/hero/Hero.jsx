@@ -10,26 +10,14 @@ const textVariants = {
         x: 0,
         opacity: 1,
         transition:{
+            delay:1,
             duration:1,
             staggerChildren: 0.1,
         },
     },
     
 }
-// const nameVariants = {
-//     initial: {
-//         x: 0,
-//         opacity: 0,
-//     },
-//     animate: {
-//         x: 0,
-//         opacity: 0.8,
-//         transition:{
-//             duration:5,
-//         },
-//     },
-    
-// }
+
 const sliderVariants = {
     initial: {
         x: 0,
@@ -50,8 +38,11 @@ const Hero = () => {
         <div className="hero">
             <div className="wrapper">
                 
-                <div className="nameTextContainer">
-                    <h2 className="myName">Michael Bazarsky</h2>
+                <div className="typingTextContainer">
+                    <h2 className="typingText" id="myName">Michael Bazarsky</h2>
+                </div>
+                <div className="typingTextContainer">
+                    <h1 className="typingText" id="role">Full Stack Developer</h1>
                 </div>
                 <motion.div 
                     className="textContainer" 
@@ -59,7 +50,7 @@ const Hero = () => {
                     initial="initial" 
                     animate="animate"
                 >
-                    <motion.h1 variants={textVariants}>Full Stack Developer</motion.h1>
+                    
                     <motion.div className="buttons" variants={textVariants}>
                         <motion.button>
                             See The Latest Works

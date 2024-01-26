@@ -12,16 +12,12 @@
         flex-direction: column;
         justify-content: center;
         gap: 40px;
-        
+
         .textContainer{
             
             display: flex;
             flex-direction: column;
             gap: 40px;
-            
-            h1{
-                font-size: 88px;
-            }
 
             .buttons{
                 button{
@@ -34,33 +30,69 @@
                     cursor: pointer;
                     font-weight: 300;
                 }
+                button:hover{
+                    background-color: orange;
+                }
             }
         }
-        .nameTextContainer{
+        .typingTextContainer{
             width:fit-content;
             position: relative;
-            left: 5px;
-            .myName{
-                font-size: 30px;
-                color: rebeccapurple;
-                letter-spacing: 10px;
+            
+            .typingText{
+                letter-spacing: 8px;
                 width: 100%;
-                border-right: 5px solid;
-                white-space:nowrap;
+                border-right: 5px solid transparent;
+                white-space: nowrap;
                 overflow: hidden;
-                animation: 
-                    typing 2s steps(16), 
-                    cursor .4s step-end infinite alternate;
+                opacity: 0;
             }
-    
-            @keyframes cursor {
-                50% { border-color: transparent}
+        }
+        #myName{
+            font-size: 40px;
+            color: rebeccapurple;
+            animation: 
+                typing 2s steps(16), 
+                cursor .4s step-end 3,
+                slidein 1s ease 3.5s forwards;
+            animation-delay: 1s;
+        }
+
+        #role{
+            font-size: 80px;
+            animation: 
+                typing 2.5s steps(24), 
+                cursor .4s step-end infinite alternate,
+                slidein 1s ease 3.5s forwards;
+            animation-delay: 3s;
+        }
+
+        @keyframes cursor {
+            
+            100% { 
+                border-color: transparent
             }
-    
-            @keyframes typing {
-                from { width: 0}
+            50% {
+                border-color: #00aeff
             }
-    
+        }
+
+        @keyframes typing {
+            from { 
+                width: 0
+            }
+            to{
+                width: 100%
+            }
+        }
+
+        @keyframes slidein {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
         
     }
@@ -73,5 +105,7 @@
         color:#ffffff09;
         width: 50%;
         font-weight: bold;
+        user-select: none;
+        
     }
 }
