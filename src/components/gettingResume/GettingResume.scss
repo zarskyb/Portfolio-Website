@@ -1,0 +1,36 @@
+.gettingResume{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    width: fit-content;
+    margin: 0 auto;
+    cursor: pointer;
+
+    #vendingMachineImage{
+        width: 350px;
+    }
+    .vendingMachine{
+
+        animation: tilt-shaking 0.25s infinite;
+
+        @keyframes tilt-shaking {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+          }
+    }
+
+    .downloadButton{
+        padding: 8px;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        font-weight: 300;
+    }
+
+
+}
