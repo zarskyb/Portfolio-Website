@@ -10,7 +10,7 @@
         width: 350px;
     }
     .vendingMachine{
-
+        
         animation: tilt-shaking 0.25s infinite;
 
         @keyframes tilt-shaking {
@@ -23,13 +23,64 @@
     }
 
     .downloadButton{
-        padding: 8px;
+        position: relative;
+        padding: 20px 30px;
         border: 1px solid white;
-        border-radius: 10px;
+        border-radius: 100vw;
         background-color: transparent;
         color: white;
         cursor: pointer;
         font-weight: 300;
+        font-family: 'Playfair Display', serif;
+        color: #fafafa;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); // easeOutQuart
+        -webkit-mask-image: -webkit-radial-gradient(white, black); // force safari to respect border radius
+        mask-image: -webkit-radial-gradient(white, black);
+
+        .buttonText{
+            position: relative;
+            z-index: 2;
+            font-family:'Courier New', Courier, monospace;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .fillContainer{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            padding-bottom: 100%;
+            transform: translateY(-50%) rotate(180deg);
+        
+            // collor filling
+            &::after{
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background-color: orange;
+              border-radius: 50%;
+              transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); // easeOutQuart
+              transform: translateY(-100%);
+            }
+          }
+          
+          &:hover{
+            border-color: orange;
+            transform: translateY(-4px);
+            
+            .fillContainer{
+              transform: translateY(-50%) rotate(0);
+        
+              &::after{
+                transform: translateY(0);
+              }
+            }
+          }
     }
 
 

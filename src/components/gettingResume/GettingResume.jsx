@@ -31,7 +31,8 @@ const GettingResume = () => {
             </div>
             {show &&
                 <button className="downloadButton" onClick={downloadResume}>
-                    Download Resume
+                    <span className="buttonText">Download Resume</span>
+                    <div className="fillContainer"></div>
                 </button>
             }
             
