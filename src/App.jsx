@@ -9,7 +9,7 @@ const App = () => {
         <Navbar/>
         <Hero/>
       </section>
-      <section id="Services">
+      <section id="About">
         Services
         <GettingResume/>
       </section>

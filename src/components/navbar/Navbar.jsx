@@ -7,13 +7,15 @@ const Navbar = () => {
         <div className="navbar">
             <div className="wrapper">
                 <Sidebar/>
-                <motion.span 
+                <motion.a 
+                    id="backHome"
+                    href={`#Homepage`}
                     initial={{opactiy: 0, scale: 0.5}}
                     animate={{opacity: 1, scale: 1}}
                     transition={{duration: 0.5}}
                 >
                     Michael Bazarsky
-                </motion.span>
+                </motion.a>
                 <div className="social">
                     <a href="https://linkedin.com/in/michael-bazarsky"><img src="/LinkedIn_icon.svg" alt="LinkedIn Icon"></img></a>
                 </div>
