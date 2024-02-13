@@ -13,8 +13,7 @@ const App = () => {
         Services
         <GettingResume/>
       </section>
-      <section id="Portfolio">Parallax</section>
-      <section>Portfolio</section>
+      <section id="Portfolio">Porfolio</section>
       <section id="Contact">Contact</section>
     </div>
   );

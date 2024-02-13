@@ -1,7 +1,7 @@
 .hero{
     height: calc(100vh);
     overflow: hidden;
-    background: linear-gradient(180deg, #0c0c1d, #111132);
+    // background: linear-gradient(180deg, #0c0c1d, #111132);
     position: relative;
     
     .wrapper{
@@ -52,6 +52,8 @@
         }
         #myName{
             font-size: 40px;
+            padding-left: 5px;
+            font-family: 'Courier New', Courier, monospace;
             color: #7F27FF;
             animation: 
                 typing 2s steps(16), 
@@ -62,6 +64,7 @@
 
         #role{
             font-size: 80px;
+            font-family: 'Courier New', Courier, monospace;
             animation: 
                 typing 2.5s steps(24), 
                 cursor .4s step-end infinite alternate,

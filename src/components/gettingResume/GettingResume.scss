@@ -6,6 +6,7 @@
     margin: auto;
     cursor: pointer;
     padding-top: 10%;
+    // background: linear-gradient(180deg, #1f0c3b, #19033a);
     #vendingMachineImage{
         width: 350px;
     }
@@ -31,7 +32,7 @@
         color: white;
         cursor: pointer;
         font-weight: 300;
-        font-family: 'Playfair Display', serif;
+        // font-family: 'Playfair Display', serif;
         color: #fafafa;
         overflow: hidden;
         transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); // easeOutQuart

@@ -26,6 +26,7 @@ const GettingResume = () => {
 
     return(
         <div className="gettingResume">
+            <span>Click Me to Get Michael's Resume!</span>
             <div className={`${style ? "vendingMachine": ""}`} onClick={shakeVendingMachine}>
                 <img id="vendingMachineImage" src="/gdp-homehighlight-vendor.svg"/>
             </div>
