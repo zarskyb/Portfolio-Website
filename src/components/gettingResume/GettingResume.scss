@@ -1,88 +1,99 @@
-.gettingResume{
-    display: flex;
-    flex-direction:column;
-    align-items:center;
-    width: fit-content;
-    margin: auto;
-    cursor: pointer;
-    padding-top: 10%;
-    // background: linear-gradient(180deg, #1f0c3b, #19033a);
-    #vendingMachineImage{
-        width: 350px;
-    }
-    .vendingMachine{
-        
-        animation: tilt-shaking 0.25s infinite;
+.servicesWrapper{
+  margin-top: 15%;
+  display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // margin: auto;
+  // justify-content: space-between;
+  
+  
+  p{
+    width: 50%;
+    padding: 50px;
+  }
+  .gettingResume{
+      text-align: center;
+      margin: auto;
+      // width: fit-content;
+      cursor: pointer;
 
-        @keyframes tilt-shaking {
-            0% { transform: rotate(0deg); }
-            25% { transform: rotate(5deg); }
-            50% { transform: rotate(0deg); }
-            75% { transform: rotate(-5deg); }
-            100% { transform: rotate(0deg); }
+      #vendingMachineImage{
+          width: 350px;
+      }
+
+      .vendingMachine{
+          
+          animation: tilt-shaking 0.25s infinite;
+
+          @keyframes tilt-shaking {
+              0% { transform: rotate(0deg); }
+              25% { transform: rotate(5deg); }
+              50% { transform: rotate(0deg); }
+              75% { transform: rotate(-5deg); }
+              100% { transform: rotate(0deg); }
+            }
+      }
+
+      .downloadButton{
+          position: relative;
+          padding: 20px 30px;
+          border: 1px solid white;
+          border-radius: 100vw;
+          background-color: transparent;
+          color: white;
+          cursor: pointer;
+          font-weight: 300;
+          // font-family: 'Playfair Display', serif;
+          color: #fafafa;
+          overflow: hidden;
+          transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); // easeOutQuart
+          -webkit-mask-image: -webkit-radial-gradient(white, black); // force safari to respect border radius
+          mask-image: -webkit-radial-gradient(white, black);
+
+          .buttonText{
+              position: relative;
+              z-index: 2;
+              font-weight: 500;
+              font-size: 15px;
           }
-    }
 
-    .downloadButton{
-        position: relative;
-        padding: 20px 30px;
-        border: 1px solid white;
-        border-radius: 100vw;
-        background-color: transparent;
-        color: white;
-        cursor: pointer;
-        font-weight: 300;
-        // font-family: 'Playfair Display', serif;
-        color: #fafafa;
-        overflow: hidden;
-        transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); // easeOutQuart
-        -webkit-mask-image: -webkit-radial-gradient(white, black); // force safari to respect border radius
-        mask-image: -webkit-radial-gradient(white, black);
-
-        .buttonText{
-            position: relative;
-            z-index: 2;
-            font-family:'Courier New', Courier, monospace;
-            font-weight: 500;
-            font-size: 15px;
-        }
-
-        .fillContainer{
-            position: absolute;
-            left: 0;
-            top: 50%;
-            width: 100%;
-            padding-bottom: 100%;
-            transform: translateY(-50%) rotate(180deg);
-        
-            // collor filling
-            &::after{
-              content: '';
+          .fillContainer{
               position: absolute;
               left: 0;
-              top: 0;
+              top: 50%;
               width: 100%;
-              height: 100%;
-              background-color: #FF8911;
-              border-radius: 50%;
-              transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); // easeOutQuart
-              transform: translateY(-100%);
-            }
-          }
+              padding-bottom: 100%;
+              transform: translateY(-50%) rotate(180deg);
           
-          &:hover{
-            border-color: #FF8911;
-            transform: translateY(-4px);
-            
-            .fillContainer{
-              transform: translateY(-50%) rotate(0);
-        
+              // collor filling
               &::after{
-                transform: translateY(0);
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #F6B17A;
+                border-radius: 50%;
+                transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); // easeOutQuart
+                transform: translateY(-100%);
               }
             }
-          }
-    }
+            
+            &:hover{
+              border-color: #F6B17A;
+              transform: translateY(-4px);
+              
+              .fillContainer{
+                transform: translateY(-50%) rotate(0);
+          
+                &::after{
+                  transform: translateY(0);
+                }
+              }
+            }
+      }
 
 
+  }
 }

@@ -18,6 +18,7 @@ const Navbar = () => {
                 </motion.a>
                 <div className="social">
                     <a href="https://linkedin.com/in/michael-bazarsky"><img src="/LinkedIn_icon.svg" alt="LinkedIn Icon"></img></a>
+                    <a href="https://github.com/mike-bazarsky"><img src="/github_logo.svg" alt="Github Icon"></img></a>
                 </div>
             </div>
         </div>

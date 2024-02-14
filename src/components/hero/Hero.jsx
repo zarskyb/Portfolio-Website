@@ -62,7 +62,7 @@ const Hero = () => {
                 </motion.div>
             </div>
             <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
-                Writer Content Creator Influencer
+                Passionate Dedicated Creative
             </motion.div>
         </div>
     )

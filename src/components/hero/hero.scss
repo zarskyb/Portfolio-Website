@@ -33,7 +33,7 @@
                     
                 }
                 button:hover{
-                    background-color: orange;
+                    background-color: #F6B17A;
                 }
             }
         }
@@ -54,7 +54,8 @@
             font-size: 40px;
             padding-left: 5px;
             font-family: 'Courier New', Courier, monospace;
-            color: #7F27FF;
+            // color: #7F27FF;
+            color: #7077A1;
             animation: 
                 typing 2s steps(16), 
                 cursor .75s step-end 2.8,
@@ -78,7 +79,7 @@
                 border-color: transparent
             }
             50% {
-                border-color: #7F27FF
+                border-color: #7077A1;
             }
         }
 
