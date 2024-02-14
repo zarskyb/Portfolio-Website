@@ -1,24 +1,34 @@
 .servicesWrapper{
-  margin-top: 15%;
+  padding-top: 15%;
   display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // margin: auto;
-  // justify-content: space-between;
-  
   
   p{
-    width: 50%;
+    width: 35%;
     padding: 50px;
   }
   .gettingResume{
       text-align: center;
       margin: auto;
-      // width: fit-content;
       cursor: pointer;
 
+      #glow{
+        position: absolute;
+        // background-color: transparent;
+        // width:200px;
+        // height:280px;
+        // width: 10px;
+        // height: 10px;
+        box-shadow: 0 0 150px 180px rgba(255,255,255,0.30);
+        z-index: 2;
+        pointer-events: none;
+        // margin-top: 28px;
+        // margin-left: 82px;
+        margin-top: 10%;
+        margin-left: 10%;
+      }
       #vendingMachineImage{
-          width: 350px;
+        position: relative;
+        width: 350px;
       }
 
       .vendingMachine{
@@ -43,7 +53,6 @@
           color: white;
           cursor: pointer;
           font-weight: 300;
-          // font-family: 'Playfair Display', serif;
           color: #fafafa;
           overflow: hidden;
           transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); // easeOutQuart
@@ -65,7 +74,6 @@
               padding-bottom: 100%;
               transform: translateY(-50%) rotate(180deg);
           
-              // collor filling
               &::after{
                 content: '';
                 position: absolute;
@@ -93,7 +101,5 @@
               }
             }
       }
-
-
   }
 }

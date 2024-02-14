@@ -26,22 +26,24 @@ const GettingResume = () => {
 
     return(
         <div className="servicesWrapper">
+            
             <p >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id soluta tenetur cumque reiciendis totam quos commodi voluptatem debitis odit quod corrupti excepturi modi eum asperiores veniam culpa, ad accusamus illum?
             </p>
             <div className="gettingResume">
-                <span>Click Me to Get Michael's Resume!</span>
+                <span>Click Me To Get My Resume!</span>
+                <div id="glow"></div>
                 <div className={`${style ? "vendingMachine": ""}`} onClick={shakeVendingMachine}>
-                    <img id="vendingMachineImage" src="/gdp-homehighlight-vendor.svg"/>
-                </div>
-                {show &&
-                    <button className="downloadButton" onClick={downloadResume}>
-                        <span className="buttonText">Download Resume</span>
-                        <div className="fillContainer"></div>
-                    </button>
-                }
-                
+                <img id="vendingMachineImage" src="/gdp-homehighlight-vendor.svg"/>
             </div>
+            {show &&
+                <button className="downloadButton" onClick={downloadResume}>
+                    <span className="buttonText">Download Resume</span>
+                    <div className="fillContainer"></div>
+                </button>
+            }
+            </div>
+
         </div>
     )
 }

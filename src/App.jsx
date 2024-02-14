@@ -5,12 +5,11 @@ import Navbar from "./components/navbar/Navbar";
 const App = () => {
   return (
     <div>
+      <Navbar/>
       <section id="Homepage">
-        <Navbar/>
         <Hero/>
       </section>
       <section id="About">
-        Services
         <GettingResume/>
       </section>
       <section id="Portfolio">Porfolio</section>
