@@ -9,26 +9,19 @@
   .gettingResume{
       text-align: center;
       margin: auto;
-      cursor: pointer;
 
       #glow{
         position: absolute;
-        // background-color: transparent;
-        // width:200px;
-        // height:280px;
-        // width: 10px;
-        // height: 10px;
-        box-shadow: 0 0 150px 180px rgba(255,255,255,0.30);
+        box-shadow: 0 0 180px 180px rgba(255,255,255,0.30);
         z-index: 2;
         pointer-events: none;
-        // margin-top: 28px;
-        // margin-left: 82px;
         margin-top: 10%;
         margin-left: 10%;
       }
       #vendingMachineImage{
         position: relative;
         width: 350px;
+        cursor: pointer;
       }
 
       .vendingMachine{
