@@ -34,7 +34,7 @@ const GettingResume = () => {
                 <span>Click Me To Get My Resume!</span>
                 <div id="glow"></div>
                 <div className={`${style ? "vendingMachine": ""}`} onClick={shakeVendingMachine}>
-                <img id="vendingMachineImage" src="/gdp-homehighlight-vendor.svg"/>
+                <img id="vendingMachineImage" src="/gdp-homehighlight-vendor.png"/>
             </div>
             {show &&
                 <button className="downloadButton" onClick={downloadResume}>
